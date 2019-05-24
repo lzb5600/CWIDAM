@@ -252,7 +252,7 @@ if __name__=="__main__":
     train_data = scaler.fit_transform(data[train_index])
     train_data=np.nan_to_num(train_data)
    
-    tr_b = np.ones((train_data.shape[0]))*1
+    tr_b = np.ones((train_data.shape[0]))
     trdata = np.column_stack((train_data,tr_b))
 
 
