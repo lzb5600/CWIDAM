@@ -243,22 +243,10 @@ if __name__=="__main__":
     #===================================================
     
     fdir = './data_30/bands/'
-#    trainD = np.load(fdir + 'trdata.npy')
-#    testD = np.load(fdir + 'tedata.npy')
-#    yTrain = np.load(fdir + 'trlabels.npy')   
-#    yTest = np.load(fdir + 'telabels.npy')
-    
-    data = np.load(fdir + 'data.npy')    
-    y = np.load(fdir+'labels.npy')
-
-
-    test_index = np.load(fdir + 'test_id.npy')
-    train_index = np.setdiff1d(range(len(y)), test_index)
-    yTrain = y[train_index]
-    yTest = y[test_index]
-
-    trainD = data[train_index]
-    testD = data[test_index]
+    trainD = np.load(fdir + 'trdata.npy')
+    testD = np.load(fdir + 'tedata.npy')
+    yTrain = np.load(fdir + 'trlabels.npy')   
+    yTest = np.load(fdir + 'telabels.npy')
     
     print(runScalenet(trainD, testD, yTrain, yTest, k, eta1, eta2, MaxIter, subMaxIter))
 
