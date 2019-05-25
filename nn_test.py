@@ -110,7 +110,7 @@ if __name__ == '__main__':
     optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.5)
 
     best_acc = 0
-    for epoch in range(1, 200):
+    for epoch in range(1, 100):
         train(args, model, device, train_loader, criterion, optimizer, epoch)
         va_accuracy = test(args, model, device, va_loader, criterion)
         if va_accuracy >= best_acc:
