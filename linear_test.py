@@ -243,8 +243,8 @@ if __name__=="__main__":
     #===================================================
     
     fdir = './data_30/bands/'
-    trainD = np.load(fdir + 'trdata.npy')
-    testD = np.load(fdir + 'tedata.npy')
+    trainD = np.load(fdir + 'trset.npy')
+    testD = np.load(fdir + 'teset.npy')
     yTrain = np.load(fdir + 'trlabels.npy')   
     yTest = np.load(fdir + 'telabels.npy')
     
