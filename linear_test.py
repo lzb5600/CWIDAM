@@ -203,7 +203,7 @@ def getL_phi (X, MTr, eta1, I, nTrain, PTr):
         L = []
         for i in range(PTr.shape[0]):
             
-            L.append(np.linalg.norm(multi_dot([2*X, multi_dot([MTr, np.diag(PTr.T[:,i]), MTr.T])/nTrain + eta1 * I, X.T]), ord='fro'))
+            L.append(np.linalg.norm(multi_dot([X, multi_dot([MTr, np.diag(PTr.T[:,i]), MTr.T])/nTrain + eta1 * I, X.T]), ord='fro'))
         
         L_phi = 2*np.max(L)
     else:
