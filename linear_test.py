@@ -235,10 +235,10 @@ def getL_h (X, eat2, nTrain, MTr, trainD):
 if __name__=="__main__":
     
     #==============parameters===========================    
-    k = 12
+    k = 14
     eta1 = 10**-6
-    eta2 = 10**1
-    MaxIter = 5
+    eta2 = 10**2
+    MaxIter = 20
     subMaxIter = 6
     #===================================================
     
