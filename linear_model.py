@@ -273,7 +273,7 @@ if __name__=="__main__":
             test_D = np.copy(testD)
             test_D[missing_mask]=np.nan
             acc.append(runScalenet(trainD, test_D, yTrain, yTest, k=k, eta1=eta1, eta2=eta2))
-        print(d_fdir+"   mean :{0:3.3f}, std :{1:3.3f}".format(np.mean(acc),np.std(acc)))
+        print(d_fdir+"   Mean Accuracy :{0:3.3f}, Standard Deviation :{1:3.3f}".format(np.mean(acc),np.std(acc)))
 
 
 
