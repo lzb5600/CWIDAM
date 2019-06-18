@@ -157,6 +157,6 @@ if __name__ == '__main__':
                         batch_size=1024, 
                         shuffle=False)
             test_acc.append(test(args, best_model, device, te_loader, criterion))
-        print("Missing Rate :{0:1f}   Mean Accuracy :{1:3.3f}, Standard Deviation :{2:3.3f}".format(missing_rate,np.mean(test_acc),np.std(test_acc)))
+        print("Missing Rate :{0:1.1f}   Mean Accuracy :{1:1.3f}, Standard Deviation :{2:1.3f}".format(missing_rate,np.mean(test_acc),np.std(test_acc)))
                      
 
