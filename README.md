@@ -1,4 +1,8 @@
 # CWIDAM
+Requirements:
+- Python 3.6.8
+- PyTorch 1.0.1
+
 To produce the experiment results of our method (may be slightly different since we fix the random seed here):  
 1. in Table 2:
     ```bash
