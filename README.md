@@ -18,3 +18,7 @@ To produce the experiment results of our method (may be slightly different since
     ```bash
         python nn_Avila.py
     ```
+4. in supplementary material:
+    ```bash
+        python linear_model_0.py
+    ```
