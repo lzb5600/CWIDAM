@@ -242,12 +242,9 @@ if __name__=="__main__":
         
         fdir = './linear_data/'+d_fdir +'/'
         
-        #==============load data============================        
-        #load original data
+        #==============load original data============================
         data0 = np.genfromtxt(fdir + 'data.txt', dtype='f8', delimiter=',')
         y = np.load(fdir+'labels.npy')
-        #load data with additional missing entries
-        data = np.load(fdir + 'data.npy')
         
         test_index = np.load(fdir + 'test_id.npy')
         train_index = np.setdiff1d(range(len(y)), test_index)
@@ -269,6 +266,5 @@ if __name__=="__main__":
         
         acc=[]        
         for i in range(5):
-            test_D = np.copy(testD)
-            acc.append(runScalenet(trainD, test_D, yTrain, yTest, k=k, eta1=eta1, eta2=eta2))
+            acc.append(runScalenet(trainD, testD, yTrain, yTest, k=k, eta1=eta1, eta2=eta2))
         print(d_fdir+"   Mean Accuracy: {0:3.3f}, Standard Deviation: {1:3.3f}".format(np.mean(acc),np.std(acc)))
